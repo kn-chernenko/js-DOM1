@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f3f5fb">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="calculator">
+        <p class="eyebrow">Прості обчислення</p>
+        <h1>Калькулятор</h1>
+        <p class="intro">Введіть два числа та виберіть математичну дію.</p>
+
+        <div class="inputs">
+            <label class="input-group" for="first-number">
+                <span>Перше число</span>
+                <input id="first-number" name="first-number" type="text"
+                    inputmode="decimal" autocomplete="off" placeholder="Наприклад, 12">
+            </label>
+            <label class="input-group" for="second-number">
+                <span>Друге число</span>
+                <input id="second-number" name="second-number" type="text"
+                    inputmode="decimal" autocomplete="off" placeholder="Наприклад, 3">
+            </label>
+        </div>
+
+        <div class="operations" role="group" aria-label="Математичні дії">
+            <button type="button" data-operation="add" aria-label="Додати">+</button>
+            <button type="button" data-operation="subtract" aria-label="Відняти">−</button>
+            <button type="button" data-operation="multiply" aria-label="Помножити">×</button>
+            <button type="button" data-operation="divide" aria-label="Поділити">÷</button>
+        </div>
+
+        <section class="result-card" aria-labelledby="result-title">
+            <h2 id="result-title">Результат</h2>
+            <output id="result" aria-live="polite">—</output>
+            <p id="message" class="message" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+</body>
+</html>
